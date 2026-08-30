@@ -1,0 +1,18 @@
+// Simple welcome message
+
+console.log("Welcome to Asthamoshi's portfolio! ✦");
+
+
+// Add a little interaction to portfolio images
+
+const images = document.querySelectorAll(".portfolio-grid img");
+
+images.forEach(function(image) {
+
+    image.addEventListener("click", function() {
+
+        alert("Artwork from Asthamoshi's portfolio ✦");
+
+    });
+
+});

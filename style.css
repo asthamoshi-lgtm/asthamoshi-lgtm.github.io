@@ -1,0 +1,654 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+
+    background: #fffaf0;
+
+    color: #252525;
+}
+
+
+img {
+    width: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 25px 6%;
+
+    position: sticky;
+
+    top: 0;
+
+    background: #fffaf0;
+
+    z-index: 100;
+}
+
+
+.logo {
+
+    font-weight: 700;
+
+    font-size: 1.3rem;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 35px;
+}
+
+
+nav a {
+
+    font-size: 0.95rem;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+
+    opacity: 0.5;
+
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 90vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 80px 8%;
+
+    background: #f6d95f;
+}
+
+
+.hero-text {
+
+    max-width: 600px;
+}
+
+
+.small-title {
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(3rem, 7vw, 6.5rem);
+
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+}
+
+
+.hero-description {
+
+    font-size: 1.2rem;
+
+    line-height: 1.7;
+
+    max-width: 450px;
+
+    margin-bottom: 35px;
+}
+
+
+.hero-image img {
+
+    height: 600px;
+
+    border-radius: 200px 200px 20px 20px;
+
+    object-fit: cover;
+}
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #252525;
+
+    color: white;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+
+    padding: 120px 8%;
+}
+
+
+.section-heading {
+
+    margin-bottom: 60px;
+}
+
+
+.section-heading p {
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+
+h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.5rem, 5vw, 5rem);
+
+    line-height: 1;
+}
+
+
+
+/* =========================
+   BOOKS
+========================= */
+
+.book-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.book-card {
+
+    cursor: pointer;
+}
+
+
+.book-card img {
+
+    height: 500px;
+
+    border-radius: 12px;
+
+    transition: 0.4s;
+}
+
+
+.book-card:hover img {
+
+    transform: rotate(-2deg) scale(1.02);
+
+}
+
+
+.book-info {
+
+    padding: 20px 5px;
+}
+
+
+.book-info h3 {
+
+    font-size: 1.4rem;
+
+    margin-bottom: 5px;
+}
+
+
+.book-info p {
+
+    opacity: 0.6;
+}
+
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 100px;
+
+    padding: 120px 8%;
+
+    background: #e8a5a8;
+}
+
+
+.about-image img {
+
+    height: 650px;
+
+    border-radius: 300px 300px 20px 20px;
+}
+
+
+.about-text {
+
+    max-width: 550px;
+}
+
+
+.about-text h2 {
+
+    margin-bottom: 30px;
+}
+
+
+.about-text p:not(.small-title) {
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio-grid {
+
+    columns: 3;
+
+    column-gap: 20px;
+}
+
+
+.portfolio-grid img {
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    break-inside: avoid;
+
+    transition: 0.3s;
+}
+
+
+.portfolio-grid img:hover {
+
+    transform: scale(1.02);
+
+}
+
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+
+    padding: 120px 8%;
+
+    background: #b8c99b;
+}
+
+
+.services h2 {
+
+    max-width: 700px;
+
+    margin-bottom: 70px;
+}
+
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+}
+
+
+.services-grid span {
+
+    font-weight: 700;
+
+    opacity: 0.5;
+}
+
+
+.services-grid h3 {
+
+    font-size: 1.7rem;
+
+    margin: 15px 0;
+}
+
+
+.services-grid p {
+
+    line-height: 1.7;
+
+    max-width: 300px;
+}
+
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    text-align: center;
+
+    padding: 150px 8%;
+
+    background: #f3a35c;
+}
+
+
+.contact h2 {
+
+    font-size: clamp(3rem, 7vw, 7rem);
+
+    margin-bottom: 30px;
+}
+
+
+.contact p:not(.small-title) {
+
+    margin-bottom: 30px;
+
+    font-size: 1.1rem;
+}
+
+
+.contact-button {
+
+    display: inline-block;
+
+    background: #252525;
+
+    color: white;
+
+    padding: 18px 35px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 50px 8%;
+
+    background: #252525;
+
+    color: white;
+}
+
+
+footer p {
+
+    opacity: 0.6;
+
+    margin-top: 5px;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.footer-links a:hover {
+
+    opacity: 0.5;
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        padding: 20px;
+    }
+
+
+    nav {
+
+        gap: 15px;
+    }
+
+
+    nav a {
+
+        font-size: 0.8rem;
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        padding: 60px 6%;
+    }
+
+
+    .hero-image img {
+
+        height: 450px;
+    }
+
+
+    .book-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 80px 6%;
+    }
+
+
+    .about-image img {
+
+        height: 500px;
+    }
+
+
+    .portfolio-grid {
+
+        columns: 2;
+    }
+
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    nav a:nth-child(3) {
+
+        display: none;
+    }
+
+
+    h1 {
+
+        font-size: 3.3rem;
+    }
+
+
+    .portfolio-grid {
+
+        columns: 1;
+    }
+
+}
+
+/* BOOK IMAGES - show the complete image */
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.amazon-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+
+    background: #e67e5f;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 25px;
+
+    font-size: 14px;
+}
+
+.amazon-button:hover {
+    opacity: 0.8;
+}
